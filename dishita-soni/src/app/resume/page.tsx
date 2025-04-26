@@ -7,7 +7,7 @@ export default function Home() {
         <nav>
         <Navbar1/>
         </nav>
-        <h1>this is the resume page</h1>
+        <h1>whatttt do i put hereeee</h1>
       </main>
       <footer>
 

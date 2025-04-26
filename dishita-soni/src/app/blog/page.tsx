@@ -1,3 +1,4 @@
+import { Blog8 } from "@/components/blog8";
 import { Navbar1 } from "@/components/navbar1";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
         <nav>
         <Navbar1/>
         </nav>
-        <h1>this is the blog page</h1>
+        <Blog8/>
       </main>
       <footer>
 
