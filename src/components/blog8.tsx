@@ -22,30 +22,30 @@ interface Blog8Props {
 
 const Blog8 = ({
   heading = "Blog Posts",
-  description = "Discover the latest insights and tutorials about modern web development, UI design, and component-driven architecture.",
+  description = "--",
   posts = [
     {
       id: "post-1",
       title:
-        "Building Modern UIs: A Deep Dive into Shadcn and React Components",
+        "update",
       summary:
-        "Join us for an in-depth exploration of building modern user interfaces using shadcn/ui and React. Learn best practices and advanced techniques.",
-      label: "Web Design",
-      author: "Sarah Chen",
-      published: "15 Feb 2024",
+        "blah blah blah update",
+      label: "==",
+      author: "Me!",
+      published: "date",
       url: "/blog/welcomepost",
       image: "https://shadcnblocks.com/images/block/placeholder-dark-1.svg",
       tags: ["Web Design", "UI Development"],
     },
     {
       id: "post-2",
-      title: "Mastering Tailwind CSS: From Basics to Advanced Techniques",
+      title: "smth smth title",
       summary:
-        "Discover how to leverage the full power of Tailwind CSS to create beautiful, responsive websites with clean and maintainable code.",
+        "smth smth smth summary",
       label: "Web Design",
-      author: "Michael Park",
-      published: "22 Feb 2024",
-      url: "https://shadcnblocks.com",
+      author: "me!!!",
+      published: "some date",
+      url: "/blog/welcomepost",
       image: "https://shadcnblocks.com/images/block/placeholder-dark-1.svg",
       tags: ["Web Design", "CSS"],
     },
@@ -72,11 +72,11 @@ const Blog8 = ({
               <div className="grid gap-y-6 sm:grid-cols-10 sm:gap-x-5 sm:gap-y-0 md:items-center md:gap-x-8 lg:gap-x-12">
                 <div className="sm:col-span-5">
                   <div className="mb-4 md:mb-6">
-                    <div className="flex flex-wrap gap-3 text-xs tracking-wider text-muted-foreground uppercase md:gap-5 lg:gap-6">
+                    <div className="flex flex-wrap gap-3 text-xs tracking-wider text-accent uppercase md:gap-5 lg:gap-6">
                       {post.tags?.map((tag) => <span key={tag}>{tag}</span>)}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold md:text-2xl lg:text-3xl">
+                  <h3 className="text-xl font-semibold text-muted-foreground md:text-2xl lg:text-3xl">
                     <a
                       href={post.url}
                       className="hover:underline"
