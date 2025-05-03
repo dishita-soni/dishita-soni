@@ -1,7 +1,7 @@
 import { Changelog1 } from "@/components/changelog1";
-import GithubCalendar from "@/components/githubcalendar";
 import { Hero1 } from "@/components/hero1";
 import { Navbar1 } from "@/components/navbar1";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -11,10 +11,17 @@ export default function Home() {
         <Navbar1/>
         </nav>
           <Hero1 heading="welcome!" description="website desc" image={{src: "/images/monkeybirthday1.png", alt:"image load?"}}/>
-          <section className="py-10">
-            <h2 className="text-2xl font-bold mb-4">GitHub Contributions</h2>
-            <GithubCalendar />
+          <section className="flex-row justify-items-center">
+            <h3 className="flex mb-5">my github contributions!</h3>
+            <Image 
+            src="https://ghchart.rshah.org/5a714d/dishita-soni" //SOURCE/CREDIT: https://github.com/2016rshah/githubchart-api
+            alt="dishita-soni's Github commit chart"
+            width={900}
+            height={450}
+            className="flex" 
+            />
           </section>
+
           <Changelog1 title="My projects" description="selected projects (team/solo) all formatted into a timeline!"/>
       </main>
       <footer>

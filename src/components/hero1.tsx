@@ -41,7 +41,7 @@ const Hero1 = ({
   },
 }: Hero1Props) => {
   return (
-    <section className="py-32 px-32">
+    <section className="py-22 px-32">
       <div className="container">
         <div className="grid items-center grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
