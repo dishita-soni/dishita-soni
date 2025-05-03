@@ -11,17 +11,14 @@ export default function Home() {
         <Navbar1/>
         </nav>
           <Hero1 heading="welcome!" description="website desc" image={{src: "/images/monkeybirthday1.png", alt:"image load?"}}/>
-          <section className="flex-row justify-items-center">
-            <h3 className="flex mb-5">my github contributions!</h3>
+            <h3 className="mb-5 text-center">my github contributions!</h3>
             <Image 
             src="https://ghchart.rshah.org/5a714d/dishita-soni" //SOURCE/CREDIT: https://github.com/2016rshah/githubchart-api
             alt="dishita-soni's Github commit chart"
             width={900}
             height={450}
-            className="flex" 
+            className="mx-auto"
             />
-          </section>
-
           <Changelog1 title="My projects" description="selected projects (team/solo) all formatted into a timeline!"/>
       </main>
       <footer>
