@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
+type Version = {
+  title: string
+  variant: "default" | "secondary" | "destructive" | "outline" | null | undefined
+}
+
 export type ChangelogEntry = {
-  version: string;
+  versions: Version[];
   date: string;
   title: string;
   description: string;
@@ -18,8 +23,8 @@ export interface Changelog1Props {
 }
 
 const Changelog1 = ({
-  title = "Changelog",
-  description = "Get the latest updates and improvements to our platform.",
+  title = "",
+  description = "",
   entries = defaultChangelogData,
 }: Changelog1Props) => {
   return (
@@ -40,13 +45,17 @@ const Changelog1 = ({
               key={index}
               className="flex grid-cols-2 gap-4 md:flex-row md:gap-16"
             >
-              <div className="top-28 flex h-min shrink-0 items-center gap-4 md:sticky">
-                <Badge variant="secondary" className="text-xs">
-                  {entry.version}
-                </Badge>
-                <span className="text-xs font-medium text-muted-foreground">
+              <div className="top-28 flex-row h-min shrink-0 items-center gap-4 md:sticky">
+                <span className="flex text-xs font-medium text-muted-foreground mb-5">
                   {entry.date}
                 </span>
+                <div className="flex-col">
+                    {entry.versions.map((version, idx)=> {
+                      return <Badge key={`${version.title}-${idx}`} variant={version.variant} className="text-xs flex mb-3">
+                        {version.title}
+                        </Badge>
+                    })}
+                </div>
               </div>
               <div>
                 <h2 className="mb-3 text-lg leading-tight font-bold text-foreground/90 md:text-2xl">
@@ -69,7 +78,7 @@ const Changelog1 = ({
                     width={600}
                     height={600}
                     src={entry.image}
-                    alt={`${entry.version} visual`}
+                    alt={` visual`} //TODO: Edit alt text
                     className="mt-8 max-w-200 rounded-lg object-cover"
                   />
                 )}
@@ -86,7 +95,12 @@ export { Changelog1 };
 
 export const defaultChangelogData: ChangelogEntry[] = [
   {
-    version: "UWB Hackathon",
+    versions: [{title: "UWB Hackathon",
+      variant: "secondary"
+    }, {title: "Figma",
+      variant: "default"
+    }
+    ] ,
     date: "April 2025",
     title: "tbd",
     description:
@@ -97,7 +111,18 @@ export const defaultChangelogData: ChangelogEntry[] = [
     image: "/images/comingsoon.png",
   },
   {
-    version: "Computing For All",
+    versions: [{title: "Computing For All",
+      variant: "secondary"
+    }, {title: "SQL/Node.js",
+      variant: "default"
+    }, {title: "React.js",
+      variant: "default"
+    }, {title: "JavaScript",
+      variant: "default"
+    }, {title: "HTML/CSS (Tailwind)",
+      variant: "default"
+    }
+    ],
     date: "January 2025",
     title: "Reddit clone",
     description:
@@ -111,7 +136,16 @@ export const defaultChangelogData: ChangelogEntry[] = [
     image: "/images/redditclone.png",
   },
   {
-    version: "Computing For All",
+    versions: [{title: "Computing For All",
+      variant: "secondary"
+    }, {title: "SQL/Node.js",
+      variant: "default"
+    }, {title: "JavaScript",
+      variant: "default"
+    }, {title: "HTML/CSS (Tailwind)",
+      variant: "default"
+    }
+    ],
     date: "November 2024",
     title: "L5-Final-Project",
     description:
@@ -125,7 +159,18 @@ export const defaultChangelogData: ChangelogEntry[] = [
     image: "/images/flashcards.png",
   },
   {
-    version: "Computing For All",
+    versions: [{title: "Computing For All",
+      variant: "secondary"
+    }, {title: "SQL/Node.js",
+      variant: "default"
+    }, {title: "RESTful API endpoints",
+      variant: "default"
+    }, {title: "JavaScript",
+      variant: "default"
+    }, {title: "HTML/CSS",
+      variant: "default"
+    }
+    ],
     date: "August 2024",
     title: "L4-Final-Project",
     description:
