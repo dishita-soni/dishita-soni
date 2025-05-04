@@ -74,8 +74,21 @@ const Changelog1 = ({
                   </ul>
                 )}
                 {entry.image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={entry.image} alt="idk yet" /> //edit alt text
+                  <>
+                  {entry.image.includes("videos")?(<div className="w-full max-w-[800px] mx-auto">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-auto rounded-lg shadow-lg mt-5"
+                  >
+                    <source src={entry.image} type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>):(<img src={entry.image} alt="idk yet" className="w-full h-auto rounded-lg shadow-lg mt-5"/> ) //edit alt text
+                }
+                  </>
                 )}
               </div>
             </div>
@@ -103,7 +116,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
     items: [
       "Hackathon!!"
     ],
-    image: "/images/monkeypro.gif",
+    image: "/images/videos/monkeypro.webm",
   },
   {
     versions: [{title: "Computing For All",
@@ -128,7 +141,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
       "Designed dynamic homepage to display posts from all joined communities; contributed significantly to both client-side logic and server-side functionality.",
       "Ensured that likes were displayed for all users both in the frontend and the backend.",
     ],
-    image: "/images/redditclone.gif",
+    image: "/images/videos/redditclone.webm",
   },
   {
     versions: [{title: "Computing For All",
@@ -175,6 +188,6 @@ export const defaultChangelogData: ChangelogEntry[] = [
       "Developed 6 RESTful endpoints to enhance application functionality and access the TMDB API;",
       "Wrote 700+ lines of code for linked project.", //TODO link projects to titles
     ],
-    image: "/images/levelFour.gif",
+    image: "/images/videos/levelFour.webm",
   },
 ];
