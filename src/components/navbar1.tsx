@@ -1,5 +1,5 @@
 import { Menu } from "lucide-react";
-
+import Link from 'next/link'
 // import {
 //   AccordionContent,
 //   AccordionItem,
@@ -33,7 +33,6 @@ interface MenuItem {
 interface Navbar1Props {
   logo?: {
     url: string;
-    src: string;
     alt: string;
     title: string;
   };
@@ -52,13 +51,15 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "#",
-    src: "#",
+    url: "/",
     alt: "logo",
     title: "dishita soni",
   },
   menu = [
-    { title: "Home", url: "/" },
+    {
+      title: "Projects",
+      url: "/projects",
+    },
     {
       title: "Resume",
       url: "/resume",
@@ -74,13 +75,13 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="pt-6 px-10 justify-center">
+    <section className="pt-6 px-10 justify-center mb-5">
       <div className="container">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex m-auto">
           <div className="flex items-center gap-6">
-              <span className="text-lg font-semibold tracking-tighter">
-                {logo.title}
+              <span className="text-lg font-semibold tracking-tighter cursor-pointer">
+                <Link href={"/"}>{logo.title}</Link>
               </span>
             <div className="flex items-center">
               <NavigationMenu>

@@ -1,5 +1,4 @@
 import { Navbar1 } from "@/components/navbar1";
-
 export default function Home() {
   return (
     <div>
@@ -7,7 +6,16 @@ export default function Home() {
         <nav>
         <Navbar1/>
         </nav>
-        <h1>whatttt do i put hereeee</h1>
+<div className="w-full h-full">
+<iframe
+  src="/images/resume.pdf"
+  width={"100%"}
+  height={"100%"}
+  style={{ border: "none" }}
+/>
+
+</div>
+
       </main>
       <footer>
 

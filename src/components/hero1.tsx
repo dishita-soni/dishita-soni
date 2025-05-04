@@ -43,9 +43,15 @@ const Hero1 = ({
   return (
     <section className="py-22 px-32">
       <div className="container">
-        <div className="grid items-center grid-cols-2">
+        <div className="grid items-center grid-cols-2 ">
+        {/*eslint-disable-next-line @next/next/no-img-element*/}          
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="h-auto w-80 rounded-md m-auto"
+          />
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h1 className="my-3 text-4xl font-bold text-pretty lg:text-6xl">
+            <h1 className=" text-4xl font-bold text-pretty lg:text-6xl">
               {heading}
             </h1>
             <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
@@ -67,12 +73,7 @@ const Hero1 = ({
               )}
             </div>
           </div>
-{          /*eslint-disable-next-line @next/next/no-img-element*/}          
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="max-h-96 w-full rounded-md object-cover"
-          />
+
         </div>
       </div>
     </section>

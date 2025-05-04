@@ -72,7 +72,7 @@ const Blog8 = ({
               <div className="grid gap-y-6 sm:grid-cols-10 sm:gap-x-5 sm:gap-y-0 md:items-center md:gap-x-8 lg:gap-x-12">
                 <div className="sm:col-span-5">
                   <div className="mb-4 md:mb-6">
-                    <div className="flex flex-wrap gap-3 text-xs tracking-wider text-accent uppercase md:gap-5 lg:gap-6">
+                    <div className="flex flex-wrap gap-3 text-xs tracking-wider text-secondary uppercase md:gap-5 lg:gap-6">
                       {post.tags?.map((tag) => <span key={tag}>{tag}</span>)}
                     </div>
                   </div>
@@ -98,7 +98,7 @@ const Blog8 = ({
                     <a
                       href={post.url}
                       target="_blank"
-                      className="inline-flex items-center font-semibold hover:underline md:text-base"
+                      className="inline-flex items-center font-semibold hover:underline md:text-base text-accent"
                     >
                       <span>Read more</span>
                       <ArrowRight className="ml-2 size-4 transition-transform" />
