@@ -1,6 +1,6 @@
 import { Navbar1 } from "@/components/navbar1";
 
-export default function Home() {
+export default function Game() {
   return (
     <div>
       <main>

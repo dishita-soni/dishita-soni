@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+// import Image from "next/image";
 
 type Version = {
   title: string
@@ -74,13 +74,8 @@ const Changelog1 = ({
                   </ul>
                 )}
                 {entry.image && (
-                  <Image
-                    width={600}
-                    height={600}
-                    src={entry.image}
-                    alt={` visual`} //TODO: Edit alt text
-                    className="mt-8 max-w-200 rounded-lg object-cover"
-                  />
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={entry.image} alt="idk yet" /> //edit alt text
                 )}
               </div>
             </div>
@@ -102,13 +97,13 @@ export const defaultChangelogData: ChangelogEntry[] = [
     }
     ] ,
     date: "April 2025",
-    title: "tbd",
+    title: "monkeypro",
     description:
       "description of hackathon project",
     items: [
       "Hackathon!!"
     ],
-    image: "/images/comingsoon.png",
+    image: "/images/monkeypro.gif",
   },
   {
     versions: [{title: "Computing For All",
@@ -133,7 +128,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
       "Designed dynamic homepage to display posts from all joined communities; contributed significantly to both client-side logic and server-side functionality.",
       "Ensured that likes were displayed for all users both in the frontend and the backend.",
     ],
-    image: "/images/redditclone.png",
+    image: "/images/redditclone.gif",
   },
   {
     versions: [{title: "Computing For All",
@@ -180,6 +175,6 @@ export const defaultChangelogData: ChangelogEntry[] = [
       "Developed 6 RESTful endpoints to enhance application functionality and access the TMDB API;",
       "Wrote 700+ lines of code for linked project.", //TODO link projects to titles
     ],
-    image: "/images/movie.png",
+    image: "/images/levelFour.gif",
   },
 ];

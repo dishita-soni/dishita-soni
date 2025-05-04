@@ -1,20 +1,20 @@
 import { Navbar1 } from "@/components/navbar1";
-export default function Home() {
+import Image from 'next/image'
+
+export default function Resume() {
   return (
     <div>
       <main>
         <nav>
         <Navbar1/>
         </nav>
-<div className="w-full h-full">
-<iframe
-  src="/images/resume.pdf"
-  width={"100%"}
-  height={"100%"}
-  style={{ border: "none" }}
-/>
-
-</div>
+        <Image
+        src="/images/resume.png"
+        alt="resume png"
+        className="m-auto"
+        width={800}
+        height={900}/>
+        <a href="/images/resume.pdf" target="_blank" rel="noopener noreferrer"> Resume </a>
 
       </main>
       <footer>

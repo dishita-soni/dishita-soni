@@ -1,7 +1,7 @@
 import { Blog8 } from "@/components/blog8";
 import { Navbar1 } from "@/components/navbar1";
 
-export default function Home() {
+export default function Blog() {
   return (
     <div>
       <main>
