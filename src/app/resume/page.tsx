@@ -1,5 +1,7 @@
 import { Navbar1 } from "@/components/navbar1";
-import Image from 'next/image'
+import ResumeView from "@/components/resume";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Resume() {
   return (
@@ -8,13 +10,15 @@ export default function Resume() {
         <nav>
         <Navbar1/>
         </nav>
-        <Image
-        src="/images/resume.png"
-        alt="resume png"
-        className="m-auto"
-        width={800}
-        height={900}/>
-        <a href="/images/resume.pdf" target="_blank" rel="noopener noreferrer"> Resume </a>
+        <div className="flex justify-end pr-20">
+          <Button className="flex">
+            <a href={"/dishita-soni-resume-feb25.pdf"} target="_blank">
+                    view actual pdf here!
+            </a>
+            <ArrowRight className="size-4" />
+          </Button>
+        </div>
+        <ResumeView/>
 
       </main>
       <footer>
