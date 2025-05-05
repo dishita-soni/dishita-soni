@@ -28,7 +28,7 @@ const Hero1 = ({
   buttons = {
     primary: {
       text: "My LinkedIn!",
-      url: "www.linkedin.com/in/dishita-soni",
+      url: "https://www.linkedin.com/in/dishita-soni",
     },
     secondary: {
       text: "Check out my GitHub!",
