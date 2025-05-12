@@ -22,7 +22,7 @@ interface Blog8Props {
 
 const Blog8 = ({
   heading = "Blog Posts",
-  description = "--",
+  description = "things I have learned, want to learn, and am learning :)",
   posts = [
     {
       id: "post-1",
@@ -34,7 +34,7 @@ const Blog8 = ({
       author: "Me!",
       published: "date",
       url: "/blog/welcomepost",
-      image: "https://shadcnblocks.com/images/block/placeholder-dark-1.svg",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRou6deM_MpkZHPN-Yic0QH4ONTH8h0nTptLA&s",
       tags: ["Web Design", "UI Development"],
     },
     {
@@ -108,10 +108,11 @@ const Blog8 = ({
                 <div className="order-first sm:order-last sm:col-span-5">
                   <a href={post.url} target="_blank" className="block">
                     <div className="aspect-[16/9] overflow-clip rounded-lg border border-border">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="h-full w-full object-cover transition-opacity duration-200 fade-in hover:opacity-70"
+                        className="h-full w-full object-cover transition-opacity duration-100 fade-in hover:opacity-70"
                       />
                     </div>
                   </a>

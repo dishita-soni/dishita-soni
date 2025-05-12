@@ -44,17 +44,20 @@ const Hero1 = ({
     <section className="py-22 px-32">
       <div className="container">
         <div className="grid items-center grid-cols-2 ">
-        {/*eslint-disable-next-line @next/next/no-img-element*/}          
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="h-auto w-80 rounded-md m-auto"
-          />
+          <div>
+            {/*eslint-disable-next-line @next/next/no-img-element*/}          
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="h-auto w-80 rounded-md m-auto"
+            />
+            <p className="text-center mt-2 text-muted-foreground">Fun fact: I knit that vest! And crocheted that skirt!</p>
+          </div>
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h1 className=" text-4xl font-bold text-pretty lg:text-6xl">
               {heading}
             </h1>
-            <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
+            <p className="mt-3 mb-10 max-w-xl text-primary lg:text-xl">
               {description}
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">

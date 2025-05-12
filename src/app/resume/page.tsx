@@ -12,7 +12,7 @@ export default function Resume() {
         </nav>
         <div className="flex justify-end pr-20">
           <Button className="flex">
-            <a href={"/dishita-soni-resume-feb25.pdf"} target="_blank">
+            <a href={"/dishitasoni-resume-april25.pdf"} target="_blank">
                     view actual pdf here!
             </a>
             <ArrowRight className="size-4" />

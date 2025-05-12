@@ -10,6 +10,7 @@ export type ChangelogEntry = {
   versions: Version[];
   date: string;
   title: string;
+  url: string;
   description: string;
   items?: string[];
   image?: string;
@@ -59,7 +60,7 @@ const Changelog1 = ({
               </div>
               <div>
                 <h2 className="mb-3 text-lg leading-tight font-bold text-foreground/90 md:text-2xl">
-                  {entry.title}
+                    <a href={entry.url} target="_blank" className="underline hover:text-primary">{entry.title}</a>
                 </h2>
                 <p className="text-sm text-muted-foreground md:text-base">
                   {entry.description}
@@ -81,12 +82,14 @@ const Changelog1 = ({
                     muted
                     loop
                     playsInline
+                    title={`${entry.title} demo visual`}
                     className="w-full h-auto rounded-lg shadow-lg mt-5"
                   >
                     <source src={entry.image} type="video/webm" />
-                    Your browser does not support the video tag.
+                    oh no! browser does not support the video tag!
                   </video>
-                </div>):(<img src={entry.image} alt="idk yet" className="w-full h-auto rounded-lg shadow-lg mt-5"/> ) //edit alt text
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                </div>):(<img src={entry.image} alt={`${entry.title} visual`} className="w-full h-auto rounded-lg shadow-lg mt-5"/> ) //TODO: edit alt text
                 }
                   </>
                 )}
@@ -103,6 +106,25 @@ export { Changelog1 };
 
 export const defaultChangelogData: ChangelogEntry[] = [
   {
+    versions: [{title: "Protothon 2025",
+      variant: "secondary"
+    }, {title: "Figma",
+      variant: "default"
+    }
+    ] ,
+    date: "May 2025",
+    title: "kittenkitchen",
+    url: "https://www.figma.com/proto/sATDbuBOyvOyDJcXeutULf/kittenkitchen?node-id=6-42&starting-point-node-id=6%3A42",
+    description:
+      "kittenkitchen is a nutrition and community food trading app that utilizes AI and maps technology to find and create recipes for healthy foods and connects people to others with surplus ingredients. ",
+    items: [
+      "Designathon!!",
+      "More items coming soon",
+      "Click the project title to check out the figma prototype"
+    ],
+    image: "/images/comingsoon.png",
+  },
+  {
     versions: [{title: "UWB Hackathon",
       variant: "secondary"
     }, {title: "Figma",
@@ -111,10 +133,12 @@ export const defaultChangelogData: ChangelogEntry[] = [
     ] ,
     date: "April 2025",
     title: "monkeypro",
+    url: "https://devpost.com/software/monkeypro",
     description:
-      "description of hackathon project",
+      "Monkeypro is a productivity application that fights the urges of doomscrolling by making studying fun--like leveling up your own personal stats! At the core, it's a timer-based system built around evidence-based study techniques",
     items: [
-      "Hackathon!!"
+      "Hackathon!!",
+      "More items coming soon"
     ],
     image: "/images/videos/monkeypro.webm",
   },
@@ -133,6 +157,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
     ],
     date: "January 2025",
     title: "Reddit clone",
+    url: "https://github.com/PAP-2025-Winter-L5-G1",
     description:
       "A website that mimics the basic functionalities of Reddit, allowing users to make/like posts, make comments, and filter posts by community.",
     items: [
@@ -156,6 +181,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
     ],
     date: "November 2024",
     title: "L5-Final-Project",
+    url: "https://github.com/PAP-2024-Fall-L5-BE-G1/Final-Project",
     description:
       "A flashcard website where you can create and study flashcard sets with no distractions",
     items: [
@@ -181,6 +207,7 @@ export const defaultChangelogData: ChangelogEntry[] = [
     ],
     date: "August 2024",
     title: "L4-Final-Project",
+    url: "https://github.com/PAP-2024-Summer-L4-FE-G1/L4-Final-Project",
     description:
       "A website with inspiration from IMDB, allowing you to browse movies, add/remove from your watchlist, and search for movies through genre filters",
     items: [

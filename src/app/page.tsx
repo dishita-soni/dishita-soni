@@ -17,7 +17,7 @@ export default function Home() {
             height={450}
             className="mx-auto"
             />
-            <Hero1 heading="welcome!" description="website desc" image={{src: "/images/monkeyPfp.png", alt:"image load?"}}/>
+            <Hero1 heading="welcome!" description="This website is a collection of professional projects and personal hobbies!" image={{src: "/images/profilepic.png", alt:"Picture of Dishita Soni standing in a tulip field"}}/>
 
       </main>
       <footer>
